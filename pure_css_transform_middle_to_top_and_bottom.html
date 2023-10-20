@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>GeniusTuner Community - Where Genius Meets Tuner | Known for Sharing</title>
+	<meta name="description" content="geniustuner.com - where genius meets tuner - known for sharing | bangladeshi first mobile based tech forum and community"/>
+	<style>
+		body {
+		  margin: 0;
+		  padding: 0;
+		  background: #F0EEF6;
+		}
+
+		.real {
+		  position: fixed;
+		  left: 0;
+		  width: 100%;
+		  background-color: #2E323E;
+		  padding: 0 20px;
+		  box-sizing: border-box;
+		  transform: scaleY(1);
+		  transform-origin: top center;
+		  transition: transform 5s ease;
+		}
+
+		.real.top {
+		  min-height: 48%;
+		  top: 0;
+		  z-index: 1;
+		  overflow: hidden;
+		  border-bottom: 1px solid #609926;
+		  transform: scaleY(1);
+		  transform-origin: top center;
+		  transition: transform 5s ease;
+		}
+
+		.real.bottom {
+		  min-height: 48%;
+		  bottom: 0;
+		  display: table;
+		  border-top: 1px solid #609926;
+		  transform: scaleY(1);
+		  transform-origin: bottom center;
+		  transition: transform 5s ease;
+		}
+
+		#expand-checkbox:checked ~ .real-check .real {
+		  transform: scaleY(0);
+		}
+
+		.btn-middle {
+			position: fixed;
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.btn-real {
+			background-color: #202430;
+			padding: 10.4px;
+			text-align: center;
+		}
+		
+		.expand-button {
+		  display: inline-block;
+		  color: #CBD0DA;
+		  cursor: pointer;
+		}
+		
+		.expand-button:hover {
+			color: #609926;
+		}
+		
+		#expand-checkbox:checked ~ .btn-middle {
+		  display: none;
+		}
+
+		@media screen and (max-width: 700px) {
+			.btn-real {
+				padding: 4.5px;
+			}
+		}
+	</style>
+</head>
+<body>
+  <input type="checkbox" id="expand-checkbox" class="expand-checkbox" style="display: none;">
+  <div class="real-check">
+    <div class="real top"></div>
+    <div class="real bottom"></div>
+  </div>
+  <div class="btn-middle">
+	  <div class="btn-real">
+			<label for="expand-checkbox" class="expand-button">Click Here To Continue</label>
+	   </div>
+   </div>
+  <h1>Welcome To GeniusTuner.Com</h1>
+  <p>where genius meets tuner - known for sharing | bangladeshi first mobile based tech forum and community</p>
+  <h2>Coming soon...</h2>
+</body>
+</html>
