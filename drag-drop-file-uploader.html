@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tuber Boy">
+    <title>Drag & Drop File Uploader Using Pure CSS</title>
+    <meta name="msapplication-TileColor" content="#786fff">
+    <meta name="theme-color" content="#786fff">
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: 'Lato', sans-serif;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-weight: 300;
+			height: 100%;
+			color: #fff;
+			font-size: 16px;
+			overflow: hidden;
+		}
+
+		.file-area {
+			background: #053777;
+			width: 50%;
+			position: relative;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 300px;
+		}
+
+		.file-area input[type=file] {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		.file-area .file-dummy {
+			width: 100%;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.2);
+			border: 2px dashed #ffffff;
+			text-align: center;
+			transition: background 0.3s ease-in-out;
+		}
+
+		.file-area .file-dummy .success {
+			display: none;
+		}
+
+		.file-area:hover .file-dummy {
+			background: rgba(255, 255, 255, 0.1);
+		}
+
+		.file-area input[type=file]:valid+.file-dummy {
+			border-color: rgba(0, 255, 0, 0.4);
+			background-color: rgba(0, 255, 0, 0.3);
+		}
+
+		.file-area input[type=file]:valid+.file-dummy .success {
+			display: inline-block;
+			padding: 50px;
+		}
+
+		.file-area input[type=file]:valid+.file-dummy .default {
+			display: none;
+		}
+
+		.icon {
+			font-size: 100px;
+			color: #fff;
+		}
+
+		header {
+			font-size: 30px;
+			font-weight: 500;
+			color: #fff;
+		}
+
+		span {
+			font-size: 25px;
+			font-weight: 500;
+			color: #fff;
+		}
+
+		button {
+			padding: 10px 25px;
+			font-size: 20px;
+			font-weight: 500;
+			border: none;
+			outline: none;
+			color: #5256ad;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.file-area {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+<form action method="post">
+    <div class="form-group file-area">
+        <input type="file" name="images" id="images" required="required" multiple="multiple" />
+        <div class="file-dummy">
+            <div class="success">File Added Successfully!</div>
+            <div class="default">
+                Built in Pure CSS
+                <div class="icon">&#128193;&#11014;&#65039;</div>
+                <header>Drag & Drop to Upload File</header>
+                <span>OR</span>
+                <button>Browse File</button>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
